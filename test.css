@@ -1,0 +1,62 @@
+<!-- <style>
+.box {
+  margin: 10px;
+  background-color: #4d9900;
+  margin: auto;
+  width: 65%;
+  border: 2px solid black;
+  padding: 10px 10px 10px 10px;
+}
+
+.titleHead {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #b3cccc;
+  border: 2px solid black;
+  text-align: center;
+  padding: 10px 10px 30px 10px;
+}
+
+.todo-box{}
+
+.addBtn{    
+    height: 25px;
+    background-color: black;
+    color: white;
+    margin: 10px 10px 10px 10px;
+}
+.addBtn:hover{
+    background-color: red;
+}
+
+.todo-input{
+    width: 50%;
+    height: 25px;
+}
+
+.delete-btn{
+    background-color: greenyellow;
+    margin: 10px 10px 10px 500px;
+}
+
+.delete-btn:hover{
+  background-color: red;
+}
+
+.li-checkbox{
+}
+
+ul{
+  background-color: #b3cccc;
+  font-family: "Courier New", Courier, monospace;
+  border: 2px solid black;
+  
+  list-style-type:none;
+  height: 100%px;
+}
+li{
+  background-color: white;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px 10px 10px;
+  font-size: 20px;
+}
+</style> -->
