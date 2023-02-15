@@ -36,12 +36,14 @@ export default {
       <input type="text" class="todo-input" @keydown.enter="printTodo">
       <!-- <button class="addBtn">add todo</button> -->
     </div>
-    <div>
+    <div class="todoBody">
       <ul>
         <li v-for="todoList in todoLists" :key="todoList.id" title="todoList.todo" class="li-list">
-          <input type="checkbox" id="checkbox" v-model="todoList.isActive" @click="todoList.isActive = !todoList.isActive"/>
-           {{ todoList.todo }}
-           <div class="delete-btn-box">
+          <div class="li-list-left">
+            <input type="checkbox" id="checkbox" v-model="todoList.isActive" @click="todoList.isActive = !todoList.isActive"/>
+            <input type="text" v-model="todoList.todo" :placeholder="[[ todoList.todo ]]">
+          </div>
+           <div class="li-list-right">
             <button class="delete-btn" @click="deleteTodo(todoList)">delete todo</button>
            </div>
         </li>
@@ -77,10 +79,16 @@ export default {
   font-size: 20px;
   display: flex;
   justify-content: space-between;
+  margin: 15px;
 }
 
 .li-list input[type="text"] {
   flex: 1 1 auto;
+  text-overflow: clip;
+}
+
+button:hover{
+  background-color: red;
 }
 
 </style>
