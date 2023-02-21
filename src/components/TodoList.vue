@@ -41,7 +41,7 @@ export default {
         <li v-for="todoList in todoLists" :key="todoList.id" title="todoList.todo" class="li-list">
           <div class="li-list-left">
             <input type="checkbox" id="checkbox" v-model="todoList.isActive" @click="todoList.isActive = !todoList.isActive"/>
-            <input type="text" v-model="todoList.todo" :placeholder="[[ todoList.todo ]]">
+            <input type="text" v-model="todoList.todo" :placeholder="[[ todoList.todo ]]" class="body-input">
           </div>
            <div class="li-list-right">
             <button class="delete-btn" @click="deleteTodo(todoList)">delete todo</button>
@@ -62,6 +62,11 @@ export default {
   padding: 10px 10px 10px 10px;
 }
 
+
+.todo-input{
+  font-size: 20px;
+}
+
 .titleHead {
   font-family: "Courier New", Courier, monospace;
   background-color: #b3cccc;
@@ -71,24 +76,36 @@ export default {
   font-size: 20px;
 }
 
-.todo-input{
-  font-size: 20px;
-}
 
-.li-list {
+.li-list  {
   font-size: 20px;
   display: flex;
   justify-content: space-between;
-  margin: 15px;
-}
-
-.li-list input[type="text"] {
+  margin: 15px 15px 15px 0px;
   flex: 1 1 auto;
   text-overflow: clip;
+  
+}
+
+
+.li-list-left{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px
 }
 
 button:hover{
   background-color: red;
+  
+}
+delete-btn{
+  height: 1.5rem;
 }
 
+.body-input{
+  width: 50rem;
+  height: 1.5rem;
+  border: 3px solid black;
+}
 </style>
